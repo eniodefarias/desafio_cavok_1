@@ -78,3 +78,30 @@ desafio_cavok
 #### usando o shell do linux
     cat requirements.txt|sort|uniq | xargs -n 1 .venv/bin/pip install; .venv/bin/pip --upgrade pip ; .venv/bin/python3 -m pip install --upgrade pip
 
+
+---
+
+ ## Criando o ambiente Django
+
+ - criando o venv no diretorio do projeto, utilizarei comandos para o Linux:
+   -  ```bash
+        mkdir desafio_cavok_1
+        cd desafio_cavok_1
+        $HOME/.pyenv/shims/python3 -m venv .venv
+        ```
+
+ - ativando o VENV, instalando depedencias:
+   -  ```bash
+        source .venv/bin/activate
+        pip install django
+        python -m pip install --upgrade pip
+        cat requeriments.txt|sort|uniq| grep -v '#' | xargs -n 1 pip3 install
+        ```
+
+ - Criando o projeto django:
+   - ```bash
+      django-admin startproject desafio 
+      ```
+
+
+
